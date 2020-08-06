@@ -19,9 +19,23 @@ figure {
 @media screen and (max-width: 800px) {
   p {
     font-size: 1.2em;
+    line-height: 1.5em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.75em;
   }
 
   h1 {
     font-size: 1.7em;
+  }
+
+  h1, h2, figure {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+  }
+
+  figure {
+    margin-top: 1em;
   }
 }
