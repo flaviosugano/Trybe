@@ -29,6 +29,10 @@ figure {
     font-size: 1.7em;
   }
 
+  h2 {
+    font-size: 1.35em;
+  }
+
   h1, h2, figure {
     margin-left: 5%;
     margin-right: 5%;
