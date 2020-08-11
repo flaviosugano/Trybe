@@ -12,9 +12,9 @@ Exemplo:
 
 - Função 2: Escreva uma função que vai receber a string retornada da Função 1 como parâmetro. Essa função deve concatenar as skills do array global à string que foi passada para a Função 2 via parâmetro. Você deve ordenar os skills em ordem alfabética. Sua função deve retornar essa nova string.*/
 
-var skills = ['JavaScript', 'HTML', 'CSS', 'GitHub', 'Pebolim'];
+const skills = ['JavaScript', 'HTML', 'CSS', 'GitHub', 'Pebolim'];
 
-function substitute(str, parameter) {
+let substitute = ('Tryber x aqui!', 'Bebeto') => {
   const stringToArray = str.split(' ');
   let stringSubstituted = "";
 
@@ -29,9 +29,9 @@ function substitute(str, parameter) {
     }
   }
   return stringSubstituted;
-}
+};
 
-function concatSkills (str, skills) {
+let concatSkills = (substitute, skills) => {
   let skillsSorted = skills.sort();
   let text = `${str}
   Minhas habilidades são:`
@@ -42,7 +42,5 @@ function concatSkills (str, skills) {
   }
   return text;
 }
-
-let frase = substitute('Tryber x aqui!', 'Bebeto');
 
 console.log(concatSkills (frase, skills));
