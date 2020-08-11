@@ -24,10 +24,14 @@ function addTurn(lesson, key, value) {
 }
 
 // ex2. Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
-function listObjectKeys(obj) {
+const listObjectKeys = (obj) => {
   for (let i in Object.keys(obj)) {
     console.log(Object.keys(obj)[i]);
   }
 }
 
-listObjectKeys(lesson3);
+// ex3. Crie uma função para mostrar o tamanho de um objeto.
+const objectSize = (obj) => Object.keys(obj).length;
+
+console.log(objectSize(lesson2))
+
