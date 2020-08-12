@@ -24,3 +24,5 @@ const listObjectKeys = (obj) => {
     console.log(Object.keys(obj)[i]);
   }
 }
+
+console.log(listObjectKeys(lesson3))
