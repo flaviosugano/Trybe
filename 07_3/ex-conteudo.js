@@ -1,0 +1,27 @@
+const assert = require('assert');
+
+// function add(a,b) {
+//   return a+b;
+// }
+
+// var expected = add(1,3);
+
+// assert(expected === 4,'One plus three equals four')
+
+// assert.deepEqual
+
+
+const list1 = [1, 2, 3, 4, 5];
+const list2 = [1, 2, 3, 4, 5];
+
+assert.deepEqual(list1, list2, 'deepEqual checks the elements in the arrays are identical');
+
+
+// const person1 = { name: 'john', age: 21 };
+// const person2 = { name: 'john', age: 21 };
+
+// assert.deepEqual(person1, person2, 'these two objects are the same');
+
+// const person3 = { name: 'john', age: 19 };
+
+// assert.notDeepEqual(person1, person2, 'these two objects are different');
