@@ -71,8 +71,11 @@ const expected_result = [
 
 // ex6: Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 function oldBooks(arrayBooks) {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  
   return arrayBooks
-    .filter(book => 2020 - book.releaseYear > 60)
+    .filter(book => currentYear - book.releaseYear > 60)
     .map(oldBook => oldBook.name);
 }
 
