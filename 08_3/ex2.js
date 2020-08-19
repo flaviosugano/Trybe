@@ -66,12 +66,10 @@ const books = [
 // ex2: Crie uma string com os nomes de todas as pessoas autoras.
 function allNames(arrayBooks) {
   const list = arrayBooks.map(book => book.author.name);
+
   return list.reduce((accumulator, currentAuthor, index) => {
-    if (index === 1) {
-      return `Nomes: ${accumulator}, ${currentAuthor}`
-    } else if (index < list.length - 1) {
-      return `${accumulator}, ${currentAuthor}`
-    }
+    if (index === 1) { return `Nomes: ${accumulator}, ${currentAuthor}` }
+    else if (index < list.length - 1) { return `${accumulator}, ${currentAuthor}` }
     return `${accumulator}, ${currentAuthor}.`
   });
 }
