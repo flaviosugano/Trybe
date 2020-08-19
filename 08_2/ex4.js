@@ -64,17 +64,35 @@ const books = [
 ];
 
 const expected_result = [
-  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-  'Fundação - Ficção Científica - Isaac Asimov',
-  'Duna - Ficção Científica - Frank Herbert',
-  'A Coisa - Terror - Stephen King',
-  'O Chamado de Cthulhu - Terror - H. P. Lovecraft'
-];
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+    releaseYear: 1928
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954
+  }
+]
+// ex4: Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+function oldBooks(arrayBooks) {
+  const today = 2020
+  return listOldBooks = arrayBooks
+  .filter(book => today - book.releaseYear > 60)
+  .sort((a, b) => a.releaseYear - b.releaseYear);
 
-// ex1: Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
-function formatedBookNames(array) {
-  return array.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
 }
 
-assert.deepEqual(formatedBookNames(books), expected_result);
+assert.deepEqual(oldBooks(books), expected_result);

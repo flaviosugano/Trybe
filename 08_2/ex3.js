@@ -1,5 +1,3 @@
-// ex3: Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
-
 const assert = require('assert');
 
 const books = [
@@ -108,6 +106,7 @@ const expected_result = [
   },
 ]
 
+// ex3: Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 function fantasyOrScienceFiction(array) {
   return array.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia')
 }
