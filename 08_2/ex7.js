@@ -68,9 +68,9 @@ const expected_result = 'O Senhor dos Anéis';
 // ex7: Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais (terminam com um ponto).
 function authorWith3DotsOnName(arrayBooks) {
   return arrayBooks
-    .find(book => book.author.name.slice(0,8).match(/\./g) 
-      ? book.author.name.slice(0,8).match(/\./g).length === 3 
-      : 0)
+    .find(book => book.author.name.slice(0,8).match(/\./g) ?
+      book.author.name.slice(0,8).match(/\./g).length === 3 :
+      0)
     .name;
   // no contador de '.' em uma string, é necessário declarar o ponto como '\.' por se tratar de um caractere reservado em Regex e, portanto, precisa desse '\' p/ ser usado em sua forma literal
 }
