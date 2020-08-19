@@ -107,8 +107,8 @@ const expected_result = [
 ]
 
 // ex3: Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
-function fantasyOrScienceFiction(array) {
-  return array.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia')
+function fantasyOrScienceFiction(arrayBooks) {
+  return arrayBooks.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia')
 }
 
 assert.deepEqual(fantasyOrScienceFiction(books), expected_result);
