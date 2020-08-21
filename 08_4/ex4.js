@@ -30,16 +30,12 @@ const people = [
 /* ex4: Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas
 australianas que nasceram no século 20:*/
 
-const filterPeople = (peopleList) => {
-  return peopleList.filter (person => {
-    const { bornIn, nationality } = person;
-    return (
-      bornIn > 1900 &&
-      bornIn < 2001 &&
-      nationality === 'Australian'
-    );
-  });
-}
+filterPeople = (peopleList) => peopleList
+  .filter (({bornIn, nationality}) => (
+    bornIn > 1900 && 
+    bornIn < 2001 && 
+    nationality === 'Australian'
+  ));
 
 const filteredPeople = filterPeople(people);
 
