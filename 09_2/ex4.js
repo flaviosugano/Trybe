@@ -7,6 +7,9 @@ const createArray = new Promise((onSuccess, onFail) => {
   const sumArrNumbers = arrNumbers
     .map(number => Math.pow(number, 2))
     .reduce((acc, cur) => acc + cur);
+  
+  console.log(`Array gerado:`)
+  console.log(arrNumbers)
 
   if (sumArrNumbers < 8000) {
     return onSuccess(sumArrNumbers)
@@ -14,14 +17,15 @@ const createArray = new Promise((onSuccess, onFail) => {
   onFail(sumArrNumbers);
 })
 .then(number => {
-  console.log(`Deu certo! A soma foi dos números ao quadrado é de ${number}`)
+  console.log(`Deu certo! A soma dos números ao quadrado é de ${number}`)
   
   const arrEx3 = [2, 3, 5, 10];
   const newArrNumbers = arrEx3.map(element => Math.round((number/element)*10)/10);
 
-  console.log(`Dividindo o número anterior por 2, 3, 5, 10 e retornando num array: ${newArrNumbers}`);
+  console.log(`Dividindo ${number} por 2, 3, 5, 10 e retornando em um array:`);
+  console.log(newArrNumbers)
 
   return Math.round(newArrNumbers.reduce((acc, cur) => acc + cur));
 })
-.then(arrNumber => console.log(`Soma do array: ${arrNumber}`))
-.catch((num) => console.log(`${num} É mais de oito mil! Essa promise deve estar quebrada!`));
+.then(sumArrNumber => console.log(`Soma do array: ${sumArrNumber}`))
+.catch((num) => console.log(`A soma dos números ao quadrado deu ${num}. É mais de oito mil! Essa promise deve estar quebrada!`));
