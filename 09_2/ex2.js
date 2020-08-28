@@ -5,7 +5,7 @@ const createArray = new Promise((onSuccess, onFail) => {
   }
 
   const sumArrNumbers = arrNumbers
-    .map(number => number * number)
+    .map(number => Math.pow(number, 2))
     .reduce((acc, cur) => acc + cur);
 
   if (sumArrNumbers < 8000) {
