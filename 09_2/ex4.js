@@ -1,9 +1,15 @@
+const generateRandomArrNumbers = () => {
+  const array = [];
+  for (let i = 0; i < 10; i += 1) {
+    array.push(Math.floor(Math.random() * 50) + 1);
+  }
+  
+  return array;
+}
+
 const promessaMilhoVerdeVQV = () => {
   const myPromise = new Promise((resolve, reject) => {
-    const arrNumbers = [];
-    for (let i = 0; i < 10; i += 1) {
-      arrNumbers.push(Math.floor(Math.random()*50)+1);
-    }
+    const arrNumbers = generateRandomArrNumbers();
 
     const sumArrNumbers = arrNumbers
       .map(number => Math.pow(number, 2))
@@ -13,7 +19,7 @@ const promessaMilhoVerdeVQV = () => {
     console.log(arrNumbers)
 
     if (sumArrNumbers < 8000) {
-      return resolve(sumArrNumbers)
+      resolve(sumArrNumbers)
     }
     reject(sumArrNumbers);
   });
