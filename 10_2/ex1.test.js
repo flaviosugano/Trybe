@@ -3,11 +3,9 @@ const uppercase = (str, callback) => {
 }
 
 describe('Testing uppercase function', () => {
-
   it('if retrives an uppercase string', () => {
     uppercase('xablau', (strUpperCased) => {
       expect(strUpperCased).toBe('XABLAU');
     })
-  });
-
-})
+  })
+});
