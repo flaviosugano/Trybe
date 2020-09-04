@@ -1,5 +1,4 @@
-/* 2. Utilizando a sintaxe de Promise, faça um teste que verifique o resultado da função getUserName para o
-caso em que o usuário é encontrado, e também um teste para o caso em que o usuário não é encontrado. */
+/* 3. Reescreva o teste do exercício anterior, desta vez utilizando a sintaxe de async/await. */
 
 const users = {
   4: { name: 'Mark' },
@@ -21,18 +20,28 @@ const getUserName = (userID) => {
 }
 
 describe('Testing function findUserById', () => {
-  it('find correct user', () => {
+  it('find correct user', async () => {
     expect.assertions(1);
-    return getUserName(4).then(userName => {
-      expect(userName).toEqual('Mark');
-    })
+    const userName = await getUserName(4);
+    expect(userName).toEqual('Mark');
   })
 
-  it('returns error message', () => {
+  // it('find correct user', () => {
+  //   return getUserName(4).then(userName => {
+  //     expect(userName).toEqual('Mark');
+  //   })
+  // })
+
+  it('returns error message', async () => {
     expect.assertions(1);
-    return getUserName(7).catch(message => {
+
+    try {
+      await getUserName(7);
+    }
+    catch (message) {
       expect(message.error).toEqual('User with 7 not found.');
-    })
+    }
+    
   })
 
 })
