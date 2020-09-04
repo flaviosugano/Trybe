@@ -10,7 +10,6 @@ const findUserById = (id) => {
     if (users[id]) {
       return resolve(users[id]);
     }
-
     return reject({ error: 'User with ' + id + ' not found.' });
   });
 }
@@ -26,22 +25,13 @@ describe('Testing function findUserById', () => {
     expect(userName).toEqual('Mark');
   })
 
-  // it('find correct user', () => {
-  //   return getUserName(4).then(userName => {
-  //     expect(userName).toEqual('Mark');
-  //   })
-  // })
-
   it('returns error message', async () => {
     expect.assertions(1);
-
     try {
       await getUserName(7);
     }
     catch (message) {
       expect(message.error).toEqual('User with 7 not found.');
     }
-    
   })
-
 })
