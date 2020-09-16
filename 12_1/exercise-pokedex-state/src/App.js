@@ -28,6 +28,10 @@ class App extends React.Component {
         <h1> Pokedex </h1>
         <button onClick={this.nextPokemon}>Next {'>>'}</button>
         <Pokedex pokemon={pokemons[index]} />
+        <div className="filterButtons">
+          <div className="typeButton">Fire</div>
+          <div className="typeButton">Psychic</div>
+        </div>
       </div>
     );
   }

@@ -8,3 +8,20 @@
   margin-right: auto;
   width: 400px;
 }
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.typeButton {
+  background-color: orange;
+  border: brown 1px solid;
+  border-radius: 5px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 75px;
+  margin: 10px 20px;
+  width: 150px;
+  height: 75px;
+}
