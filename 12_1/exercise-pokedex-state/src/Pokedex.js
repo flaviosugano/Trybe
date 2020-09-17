@@ -41,8 +41,14 @@ class Pokedex extends React.Component {
           <Pokemon key={pokemon.id} pokemon={pokemon} />
         </div>
         <div className="filterButtons">
+          <div className="typeButton" id="Bug" onClick={this.typeSelect}>Bug</div>
+          <div className="typeButton" id="Dragon" onClick={this.typeSelect}>Dragon</div>
+          <div className="typeButton" id="Electric" onClick={this.typeSelect}>Electric</div>
           <div className="typeButton" id="Fire" onClick={this.typeSelect}>Fire</div>
+          <div className="typeButton" id="Normal" onClick={this.typeSelect}>Normal</div>
+          <div className="typeButton" id="Poison" onClick={this.typeSelect}>Poison</div>
           <div className="typeButton" id="Psychic" onClick={this.typeSelect}>Psychic</div>
+
         </div>
       </div>
     );

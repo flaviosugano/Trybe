@@ -12,6 +12,8 @@
 .filterButtons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 200px;
 }
 
 .typeButton {
@@ -21,7 +23,7 @@
   vertical-align: middle;
   text-align: center;
   line-height: 75px;
-  margin: 10px 20px;
+  margin: 7px 20px;
   width: 150px;
   height: 75px;
 }
