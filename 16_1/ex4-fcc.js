@@ -5,48 +5,30 @@
 // to different action events. This is a standard pattern in writing Redux reducers. The switch statement
 // should switch over action.type and return the appropriate authentication state.
 
-// Change code below this line
-
-const LOGIN = 'LOGIN';
-const LOGOUT = 'LOGOUT';
-
-// Change code above this line
-
 const defaultState = {
   authenticated: false
 };
 
 const authReducer = (state = defaultState, action) => {
-
+  // Change code below this line
   switch (action.type) {
-
-    case LOGIN:
-      return {
-        authenticated: true
-      }
-
-    case LOGOUT:
-      return {
-        authenticated: false
-      }
-
-    default:
-      return state;
-
+    case 'LOGIN': return { authenticated: true }
+    case 'LOGOUT': return { authenticated: false }
+    default: return defaultState;
   }
-
+  // Change code above this line
 };
 
 const store = Redux.createStore(authReducer);
 
 const loginUser = () => {
   return {
-    type: LOGIN
+    type: 'LOGIN'
   }
 };
 
 const logoutUser = () => {
   return {
-    type: LOGOUT
+    type: 'LOGOUT'
   }
 };
